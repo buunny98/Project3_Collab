@@ -1,0 +1,294 @@
+body {
+    margin: 0rem;
+    padding: 0rem;
+    background: rgb(255, 255, 255);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 0 5%;
+    height: 70px;
+    background: rgb(43, 43, 43);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav .logo {
+    float: left;
+    padding-bottom: 0rem;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: white;
+}
+
+@media (max-width: 20rem) {
+    nav .logo {
+        font-size: 1rem;
+    }
+}
+
+.logoCo {
+    text-decoration: none;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.logoCob {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2rem;
+}
+
+.logoCobb {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.6rem;
+}
+
+.bodyCo {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.logoCo a:hover {
+    color: white
+}
+
+.logoCo a::before {
+    content: '';
+    display: block;
+    transform: translateY(0%);
+    height: 9px;
+    background-color: RGB(255, 255, 255, 0);
+    top: 0;
+    width: 0%;
+}
+
+nav .links {
+    float: right;
+    padding: 0;
+    margin: 0;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav .links li {
+    padding-bottom: 30px;
+    list-style: none;
+    align-items: center;
+}
+
+nav .links a {
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    padding: 1em;
+    font-size: 13px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+#nav-toggle {
+    position: relative;
+    top: -100px;
+}
+
+nav .icon-burger {
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-60%);
+}
+
+nav .icon-burger .line {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+    border-radius: 3px;
+    transition: all .3s ease-in-out;
+}
+
+@media screen and (max-width: 700px) {
+    nav .logo {
+        transform: translateY(-20%);
+        float: none;
+        width: auto;
+        justify-content: center;
+    }
+    nav .links {
+        float: none;
+        position: fixed;
+        z-index: 9;
+        left: 0;
+        right: 0;
+        top: 70px;
+        bottom: 100%;
+        background: rgb(39, 39, 39);
+        width: auto;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: auto;
+        overflow: hidden;
+        transition: all .5s ease-in-out;
+    }
+    nav .links a {
+        font-size: 15px;
+    }
+    nav .icon-burger {
+        display: block;
+    }
+    nav :checked~.links {
+        bottom: 0;
+    }
+    nav :checked~.icon-burger .line:nth-child(1) {
+        transform: translateY(10px) rotate(225deg);
+    }
+    nav :checked~.icon-burger .line:nth-child(3) {
+        transform: translateY(-10px) rotate(-225deg);
+    }
+    nav :checked~.icon-burger .line:nth-child(2) {
+        opacity: 0;
+    }
+}
+
+/*  The top navigation */
+
+.navcontainer {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.homeColor {
+    color: rgb(0, 0, 0);
+}
+
+.header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+nav a:hover {
+    color: whitesmoke;
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    transform: translateY(-100%);
+    height: 2px;
+    background-color: white;
+    top: 0;
+    width: 0%;
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+span.c {
+    display: block;
+}
+
+.marginz {
+    margin: 2rem;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+    opacity: 1;
+    /*adding responsiveness to the image so it can move according to the size of the browser.*/
+    transition-duration: 0.5s;
+}
+
+a:hover img, a:focus img {
+    opacity: 90%;
+}
+
+.n-item {
+    font-weight: bold;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    padding: 0.5rem;
+    text-decoration: none;
+    /*took the help of the TA to add the buttons*/
+}
+
+.n-item a:hover {
+    color: whitesmoke;
+}
+
+.n-item a::before {
+    content: '';
+    display: block;
+    transform: translateY(-100%);
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    top: 0;
+    width: 0%;
+    transition: all ease-in-out 250ms;
+}
+
+.n-item a:hover::before {
+    width: 100%;
+}
+
+code {
+    font-family: 'Inconsolata', monospace;
+    color: crimson;
+    background-color: #f1f1f1;
+    border-top: 0rem;
+    font-size: 105%;
+}
+
+.paraNav {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.paraSub {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.paraSub1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.33rem;
+}
+
+.paraPara {
+    font-family: 'Inconsolata', monospace;
+}
+
+.paraPara1 {
+    font-family: 'Inconsolata', monospace;
+    font-size: 1.3rem;
+    line-height: 1.9rem;
+}
+
+.paraPara2 {
+    font-family: 'Inconsolata', monospace;
+    font-size: 1.1rem;
+    line-height: 1.9rem;
+}
+
+.ali {
+    text-align: center;
+}
